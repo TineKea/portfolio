@@ -1,0 +1,46 @@
+body {
+  background-color: hotpink;
+}
+
+img {
+  max-width: 100px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.contact_info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.box {
+  background-color: rgb(189, 222, 224);
+  text-align: center;
+  padding: 20px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.about_box {
+  background-color: rgb(189, 222, 224);
+  text-align: center;
+  padding: 20px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.project_box {
+  background-color: rgb(189, 222, 224);
+  text-align: center;
+  padding: 20px;
+}
