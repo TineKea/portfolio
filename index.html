@@ -6,29 +6,34 @@
     <title>Tine - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <!--Lav det responsivt med 1 colum til mobil og 2 til pc-->
-    <!--lav sticky button med scroll til top function i højre hjørne-->
     <!--find correct fonts, photos, icons, and colors-->
     <!--lav favicon-->
   </head>
 
   <body>
     <header>
-      <nav>
+      <nav class="nav_con">
         <div>
           <img src="/img/profil.jpg" alt="Profil picture of me" /> <!--brug et profesionelt looking billede-->
         </div>
 
         <div>
           <ol>
-            <!--lav det så den ruller den til det stykke der matcher nav ai-->
-            <li>About me</li>
-            <li>Projects</li>
-            <li>Contact me</li>
+            <li>
+              <a href="#session1">About me</a>
+            </li>
+            <li>
+              <a href="#session2">Projects</a>
+              </li>
+            <li>
+              <a href="#session3">Contact me</a>
+              </li>
           </ol>
         </div>
       </nav>
     </header>
     <main>
+      <section id="session1">
       <div>
         <h1>
           Currently Multi media design student at 
@@ -36,10 +41,11 @@
           Design and Technology 
         </h1>
         <h2>
-          Focused on SoMe creation, SEO, UX "(user experience)" and digital
+          Focused on SoMe creation, SEO, UX design  and digital
           marketing
         </h2>
       </div>
+    </section>
 
        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 
@@ -48,40 +54,37 @@
       <div>
         <p>
             My name is Tine Tinhøj. I am from Denmark and is living in Holbæk with
-            my very adorable Cat and loverable boyfriend.
+            my very adorable cat and loverable boyfriend.
           </p>
         <p>
-          In my past time i enjoyed playing video games on my PC, commenpeting
-          in Pokemon trading card game turnamemnts in my local community and
-          watching sports like NFL, Soccer, tour de france and UFC on TV.
+          In my past time i enjoy playing video games on my PC, competing in Pokemon trading card game tournaments in my local community and watching sports like NFL, Soccer, Tour de France and UFC on TV.
         </p>
 
         <div>
           <p>
-            If i have to describe myself in one sentence i would describe myself
-            in the following way:
+            If i have to describe myself in one sentence i would describe myself in the following way:
           </p>
-          <q>I am a unique type of weirdo who suffers from chronic
-            over-enthusiasm, with a twist of
+          <q>I am a unique type of geek who suffers from chronic
+            over-enthusiasm with creativity and ideas constantly running thorugh my veins
           </q> <!--brug speciel font here-->
         </div>
       </div>
 
       <div>
         <p>
-          I am currently in my third semester of multi media design on KEA -
-          Copenhagen School of Design and Technology.
+          I am currently in my third semester of multi media design on KEA - Copenhagen School of Design and Technology.
         </p>
         <p>
-          I am really interesed in and focused on content creationf for multiple
+          I am really interesed in and focused on content creation for multiple
           social medias platforms, SEO, user experience and digital marketing.
         </p>
       </div>
 
+      
       <div class="about">
         <div class="about_box">
           <h3>What tools i can use:</h3>
-          <ol>
+          <ul>
             <li>Figma</li>
             <li>Adobe Photoshop</li>
             <li>Adobe Premiere Pro</li>
@@ -92,12 +95,12 @@
             <li>Github</li>
             <li>Astro.build</li>
             <li>Netlify</li>
-          </ol>
+          </ul>
         </div>
 
         <div class="about_box">
           <h3>What set of knowlegde i have:</h3>
-          <ol>
+          <ul>
             <li>Color theory and gestalt</li>
             <li>What makes great UI and UX</li>
             <li>
@@ -117,11 +120,11 @@
               sustainable online content
             </li>
             <li>Producing Hi-Fi and Lo-fi prototypes of websites</li>
-          </ol>
+          </ul>
         </div>
       </div>
 
-     
+      <section id="session2">
         <!--Showcase for each project with evt. netlify link and swiping still fotos-->
         <h2>My projects</h2>
     <div class="project">
@@ -131,8 +134,10 @@
         <div class="project_box">Fansite for the Horzion games</div>
         <div class="project_box">Pokemon database</div>
       </div>
+    </section>
 
-      <h2>Contact me</h2>
+    <section >
+      <h2 id="session3">Contact me</h2>
       <!--Find og brug copy right correct icons OR create your own-->
       <div class="contact_info">
         <div class="box">
@@ -164,6 +169,7 @@
             </p>
             <p>Phone: +45 53 35 72 06</p>
         </div>
+      </section>
           
       </div>
     </main>
