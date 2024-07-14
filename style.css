@@ -3,12 +3,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
-  max-width: 300px;
+  max-width: 250px;
   border-radius: 50px;
 }
 
@@ -24,6 +28,7 @@ q {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: italic;
+  color: #d7c5c5;
 }
 
 h1,
@@ -37,36 +42,73 @@ h3 {
 
 .contact_info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
+  padding: 5px; /* Adds space inside the container */
 }
+
 .box {
   background-color: #f08822;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .contact_info {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px; /* Adds more space inside the container on larger screens */
+  }
 }
 
 .about {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
 }
+
 .about_box {
   background-color: #f08822;
   text-align: center;
   padding: 20px;
   border-radius: 30px;
+  margin: 20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
+  padding: 10px;
 }
+
 .project_box {
   background-color: #f08822;
-  text-align: center;
   padding: 20px;
+  border-radius: 30px;
+  margin: 20px;
+  text-align: center; /* Center align content */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+video {
+  max-width: 100%; /* Make the video responsive */
+  height: auto;
 }
 
 #myBtn {
@@ -90,16 +132,54 @@ h3 {
 }
 
 .nav_con {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 240%;
   font-style: normal;
   color: aliceblue;
+  gap: 60px; /* Just in case you want a gap between the elements */
 }
 
+.nav_con div {
+  flex: 1; /* This makes the divs take equal space */
+}
+
+.nav_con img {
+  max-width: 100%;
+  height: auto; /* Ensures the image is responsive */
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.tine {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav_con {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_con div {
+    width: 100%;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -116,4 +196,45 @@ a:hover {
 .tine {
   color: #f08822;
   font-family: "Bebas Neue", sans-serif;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.centered-quote {
+  display: block; /* Ensures the <q> element takes up the full width */
+  font-style: italic;
+  margin-top: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .quote-container {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
+  }
+
+  .quote-container {
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .centered-quote {
+    margin: 10px 0;
+  }
 }
