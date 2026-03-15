@@ -99,7 +99,14 @@ a:hover {
   padding: 20px;
   border-radius: 30px;
   margin: 20px;
-  text-align: center;
+  text-align: left;
+}
+
+.project_box a {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 /* PROJEKTER */
@@ -129,8 +136,18 @@ video {
   padding: 20px;
 }
 
+.centered-about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
 #session4,
-#session1 {
+#session1,
+#session5,
+#session6 {
   flex: 1 1 400px;
   max-width: 500px;
 }
@@ -143,6 +160,12 @@ video {
 
 .about_box p {
   text-align: left;
+}
+
+.about_box2 {
+  background-color: #f08822;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 /* KONTAKT */
