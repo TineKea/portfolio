@@ -1,6 +1,14 @@
+/* GLOBAL */
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   background-color: #5d8f9e;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -8,25 +16,18 @@ html {
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0;
 }
 
-img {
-  max-width: 250px;
-  border-radius: 50px;
-}
-
-ol {
-  list-style: none;
-}
-
+ol,
 ul {
-  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 q {
   font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-style: italic;
   color: #d7c5c5;
 }
@@ -37,154 +38,10 @@ h3 {
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
-.contact_info {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  padding: 5px; /* Adds space inside the container */
-}
-
-.box {
-  background-color: #f08822;
-  text-align: center;
-  padding: 10px;
-  border-radius: 30px;
-  margin: 20px;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .contact_info {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 20px; /* Adds more space inside the container on larger screens */
-  }
-}
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.about_box {
-  background-color: #f08822;
-  text-align: center;
-  padding: 20px;
-  border-radius: 30px;
-  margin: 20px;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .about {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.project {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  padding: 10px;
-}
-
-.project_box {
-  background-color: #f08822;
-  padding: 20px;
-  border-radius: 30px;
-  margin: 20px;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-  .project {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-video {
-  max-width: 100%; /* Make the video responsive */
-  height: auto;
-}
-
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #304045; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#myBtn:hover {
-  background-color: #d7c5c5; /* Add a dark-grey background on hover */
-}
-
-.nav_con {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-size: 240%;
-  font-style: normal;
-  color: aliceblue;
-  gap: 60px; /* Just in case you want a gap between the elements */
-}
-
-.nav_con div {
-  flex: 1; /* This makes the divs take equal space */
-}
-
-.nav_con img {
-  max-width: 100%;
-  height: auto; /* Ensures the image is responsive */
-}
-
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ol li {
-  margin-bottom: 10px;
-}
-
-.tine {
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .nav_con {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav_con div {
-    width: 100%;
-  }
-
-  ol {
-    padding-left: 20px;
-  }
-}
 a {
   text-decoration: none;
-}
-
-.nav_text {
-  color: rgb(227, 230, 233);
 }
 
 a:hover {
@@ -192,64 +49,182 @@ a:hover {
   transition: text-shadow 0.5s;
 }
 
-.tine {
-  color: #f08822;
+/*  NAVIGATION */
+.nav_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  color: aliceblue;
 }
 
-.quote-container {
+.nav_con > div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.nav-menu ol {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nav_text {
+  color: rgb(227, 230, 233);
+}
+
+.tine {
+  color: #f08822;
+}
+
+/* BOXES */
+.project_box,
+.box {
+  background-color: #f08822;
+  padding: 20px;
+  border-radius: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* PROJEKTER */
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+
+.project_box img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HVEM ER JEG + KOMPETENCER CENTERET */
+.centered-about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+#session4,
+#session1 {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.about_box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about_box p {
   text-align: left;
-  margin: 20px 0;
 }
 
-.centered-quote {
-  display: block; /* Ensures the <q> element takes up the full width */
-  font-style: italic;
-  margin-top: 10px;
+/* KONTAKT */
+.contact_info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
 }
 
-p {
-  margin: 10px 0;
+.contact_info .box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
 }
 
-@media (max-width: 768px) {
-  .quote-container {
-    align-items: flex-start;
-    text-align: left;
+.contact_info .box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* SCROLL TO TOP */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: #304045;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#myBtn:hover {
+  background-color: #d7c5c5;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .project {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
-  }
-
-  .quote-container {
+/* MOBIL */
+@media (max-width: 767px) {
+  .nav_con > div {
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin: 15px 0;
+    gap: 20px;
   }
 
-  .centered-quote {
-    margin: 10px 0;
+  .nav-menu ol {
+    align-items: center;
+  }
+
+  .portrait,
+  .about_box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact_info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact_info .box {
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
 .container1 {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the container horizontally */
-  text-align: left; /* Aligns the text inside the container to the left */
-  margin: 20px 0;
-  width: 100%; /* Set width of the container to 100% or adjust as needed */
-  max-width: 600px;
-}
-
-.outer_container {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
